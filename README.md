@@ -382,7 +382,7 @@ This section is intended to clarify, and not to limit or modify, the disclaimer 
 
 - Northumbrian Water Limited
 - Cognizant Worldwide Limited
-- Xylem
+- Xylem Water Solutions UK Limited
 - Water Research Centre Limited
 - RSK ADAS Limited
 - The Rivers Trust
@@ -410,3 +410,4 @@ This section is intended to clarify, and not to limit or modify, the disclaimer 
 8. Kamminga, J., Ayele, E., Meratnia, N., & Havinga, P. (2018). Poaching Detection Technologies - A Survey. Sensors, 18(5), 1474. https://doi.org/10.3390/s18051474.
 
 9. Yosef Akhtman, S2DR3: Effective 10-Band 10x Single Image Super-Resolution for Sentinel-2. Medium: https://medium.com/@ya_71389/c71a601a2253
+
