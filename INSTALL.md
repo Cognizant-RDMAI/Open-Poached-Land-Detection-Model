@@ -53,19 +53,33 @@ This section provides details of step by step instructions to run the [Open-Poac
 
 ---
 
-### 4. Training Data for Landcover Classification 
-**Asset ID**: `projects/rdmai-dev-ml/assets/6_Training_Classes`
+### 4. Training Data for Landcover Classification
+**Output**: Sampled pixel training table (bands + landcover)  
+**Export**: Google Drive CSV (from `sampleRegions`)  
 
-#### **Steps to Create:**
-1. **Create Labeled Points or Polygons**:
-   - Use the GEE drawing tools or import shapefiles/GeoJSON with labeled land cover classes (e.g., cropland, poached land, trees).
+#### Steps to Create:
+1. **Prepare Training Polygons (or Points)**
+   - Create/import separate `FeatureCollection`s for each class (cropland, poached land, trees, etc.).
 
-2. **Assign Class Labels**:
-   - Add a property like `landcover` to each feature.
+2. **Assign Class Labels**
+   - Add a numeric property `landcover` to each collection:
+     - 0 = poached land  
+     - 1 = bare cropland  
+     - 2 = cropland  
+     - 3 = trees  
+     - 4 = waterbodies  
+     - 5 = built-up  
 
-3. **Merge and Export**:
-   - Combine all labeled features into a single `FeatureCollection`.
-   - Export using `Export.table.toAsset()`.
+3. **Merge All Labeled Features**
+   - Merge all labeled collections into one `trainingData`.
+
+4. **Sample Image Pixels Under Training Geometry**
+   - Use `image.sampleRegions()` with `properties: ['landcover']` and an appropriate `scale` (e.g., 5m).
+
+5. **Export Training Samples**
+   - Export the sampled training table as CSV to Google Drive:
+     - `Export.table.toDrive({ collection: sampleData, fileFormat: 'CSV' })`
+``
 
 ---
 
@@ -300,3 +314,4 @@ Export.table.toDrive({
 
 * This guide assumes usage in a Google Earth Engine (GEE) environment.
 * Please refer `README.md` for detailed description of the model.
+
