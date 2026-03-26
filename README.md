@@ -40,6 +40,14 @@ By improving monitoring capabilities, this model plays a pivotal role in soil er
 
 Please download the Open Poached Land Detection Model Report [here](doc/Open_Poached_Land_Detection_Model_Report.pdf).
 
+### Benchmark Download:
+
+River Deep Mountain AI models have been independently benchmarked by WRc and ADAS, against existing industry-standard tools. The benchmarking reports assess model performance, ‘ease-of-use’, time and cost requirements.Read the full report [here](https://github.com/Cognizant-RDMAI/Open-Poached-Land-Detection-Model/tree/main/doc).
+
+### Whitepaper Download:
+
+Please download the whitepaper [here](https://github.com/Cognizant-RDMAI/Open-Poached-Land-Detection-Model/tree/main/doc).
+
 ## 2. Installation Instructions
 
 The following steps describes how to use the Poached Land Detection Model:
